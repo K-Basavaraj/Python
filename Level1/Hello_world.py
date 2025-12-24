@@ -32,7 +32,3 @@ print("Hello "+ name) #Hello Basavaraj
 
 name = "Alex"
 print("Hi "+ name) #Hi Alex
-
-name = "Rajesh"
-#print(name)   #output: Rajesh
-print(type(name))
