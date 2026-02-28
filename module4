@@ -1,0 +1,153 @@
+==> loops
+----
+1. while loop: 
+A while loop will continuously execute code depending on the value of a condition. It begins with the keyword while, followed by a comparison to be evaluated, then a colon. 
+On the next line is the code block to be executed, indented to the right. Similar to an if statement, the code in the body will only be executed if the comparison is evaluated to be true. What sets a while loop apart, however,
+is that this code block will keep executing as long as the evaluation statement is true. Once the statement is no longer true, the loop exits and the next line of code will be executed.  
+
+while loops
+A while loop executes the body of the loop while a specified condition remains True. They are commonly used when there’s an unknown number of operations to be performed, and a condition needs to be checked at each iteration.
+
+syntax: 
+while specified condition is True:
+    body of loop 
+
+basic example: 
+-------
+my_variable = 5
+while my_variable < 10:
+    print("Hello")
+    my_variable += 1
+
+example1: 
+x =   0
+while x < 5:
+    print("Not there yet, x=" + str(x))
+    x = x + 1
+print("x=" + str(x))
+
+output: 
+-------
+Not there yet, x=0
+Not there yet, x=1
+Not there yet, x=2
+Not there yet, x=3
+Not there yet, x=4
+x=5
+
+example2: 
+def attempts(n):
+    x = 1
+    while x <= n:
+        print("Attempt " + str(x))
+        x += 1
+    print("Done")
+output:
+------
+attempts(5)
+Attempt 1
+Attempt 2
+Attempt 3
+Attempt 4
+Attempt 5
+Done
+
+example3: 
+x = 1
+sum = 0
+while x < 10:
+    sum = sum + x
+    x = x + 1
+
+product = 1
+while x < 10:
+    product = product * x
+    x = x + 1
+
+print(sum, product)
+#Ouput 45 1
+
+example4: 
+def count_down(start_number):
+  current = start_number
+  while (current > 0):
+    print(current)
+    current -= 1
+  print("Zero!")
+count_down(3)
+output: 
+----
+3
+2
+1
+Zero!
+
+2) Infinite loops and how to break them
+while loops use a condition to check when to exit. The body of the while loop needs to make sure that the condition being checked will change. If it doesn't change, the loop may never finish, and we get what's called an infinite loop, 
+a loop that keeps executing and never stops. 
+Check out this 
+example 1: 
+while x % 2 == 0:
+    x = x / 2
+#No output
+It uses the modulo operator that we saw a while back. This cycle will finish for positive and negative values of x. But what would happen if x was zero? 
+The remainder of 0/2 is zero, so the condition would be true. The result of dividing zero by two would also be zero, so the value of x wouldn't change, this loop would go on forever, and so we'd get an infinite loop. 
+
+example 1 contin..
+-----
+if x != 0:
+    while x % 2 == 0:
+        x = x / 2
+#No output
+In this example, we said that x needs to be different than zero. We could nest this while loop inside an if statement, just like this. With this approach, the while loop is executed only when x is not zero. Alternatively, 
+we could add the condition directly to the loop using a logical operator,  like in this example.
+while x != 0 and x % 2 == 0:
+    x = x / 2
+#No output
+This makes sure we only enter the body of the loop for values of x that are both different than zero and even. 
+
+NOTE:  when you're writing loops, it's a good idea to take a moment to consider the different values a variable can take. This helps you make sure your loop won't get stuck. 
+If you see that your program is running forever without finishing, have a second look at your loops to check there's no infinite loop hiding somewhere in the code. 
+
+example2: 
+----
+def print_range(start, end):
+	# Loop through the numbers from start to end
+	n = start
+	while n <= end:
+		print(n)
+    n += 1 # <-- missing line
+
+print_range(1, 5)  # Should print 1 2 3 4 5 (each number on its own line) 
+#You need to increment n at the end of each loop iteration, otherwise n will always equal start and the condition n <= end will never become false.
+
+
+example3 code: 
+multiplier = 1
+result = multiplier * 5
+while result <= 50:
+    print(result)
+    multiplier += 1
+    result = multiplier * 5
+print("Done")
+
+
+==> KeyNote: 
+In your code, you could have an infinite loop, In Python, we use the brake keyword. the  loop should stop running. We can use it not only to stop infinite loops, but also to stop a loop early if the code has already achieved what's needed.
+How do you avoid the most common pitfalls when writing while loops? 
+First, remember to initialize your variables, and 
+second, check that your loops won't run forever.
+
+==> Common errors in Loops
+If you get an error message on a loop or it appears to hang, your debugging checklist should include the following checks:
+
+i) Failure to initialize variables. Make sure all the variables used in the loop’s condition are initialized before the loop.
+
+ii) Unintended infinite loops. Make sure that the body of the loop modifies the variables used in the condition, so that the loop will eventually end for all possible values of the variables. 
+You can often prevent an infinite loop by using the break keyword or by adding end criteria to the condition part of the while loop.
+
+==> Terms
+while loop - Tells the computer to execute a set of instructions while a specified condition is True. In other words, while loops keep executing the same group of instructions until the condition becomes False.
+infinite loop - Missing a method for exiting the loop, causing the loop to run forever.
+break - A break statement in Python provides a way to exit out of a loop before the loop's condition is false. Once a break statement is encountered, the program's control flow jumps out of the loop and continues executing the code after the loop.
+pass - A pass statement in Python is a placeholder statement which is used when the syntax requires a statement, but you don't want to execute any code or command.
