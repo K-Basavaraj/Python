@@ -1,0 +1,10 @@
+DevOps is a combination of development and operations.
+Automation is a key principle in DevOps culture.
+Continuous Integration and Continuous Deployment improve software delivery.
+Python is widely used for automation scripting.
+Infrastructure as Code helps manage cloud resources efficiently.
+Logging and monitoring are essential for system reliability.
+Cloud platforms like Azure and AWS provide scalable infrastructure.
+Security and compliance are critical in modern IT environments.
+DevOps engineers focus on collaboration and automation.
+Testing ensures quality before production deployment.

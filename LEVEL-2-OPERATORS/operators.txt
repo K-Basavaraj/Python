@@ -1,0 +1,28 @@
+operators used for mathmatical and numarical operations: 
+operators are symbols that perform operations on variables and values. 
+Numeric Operators: 
+-------------
+-> Exponentitation [**]: 
+Raises a number to the power of another.
+example 10 ** 3 results in 1000
+
+--> Division [ / ]:
+Divides one number by another, resulting in a float. 
+example: 10/3 result approx 3.333 
+
+--> Modulus [ % ] : 
+Finds the remainder of a division. 
+example: 10%3 returns 1(since 9 is the closest divisiable number)
+
+
+--> Floor Division [ // ]:
+Divides and return the laregest integer less than equal to the result. 
+
+Mltiplication [*] 
+Addition [ + ] 
+Substraction [ - ] 
+--------
+
+
+
+

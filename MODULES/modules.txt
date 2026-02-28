@@ -1,0 +1,17 @@
+PYTHON MODULES NOTES
+
+1. Every .py file is called a module.
+2. Python automatically creates a special variable called __name__.
+3. If file runs directly:
+       __name__ = "__main__"
+4. If file is imported:
+       __name__ = filename
+5. We use:
+
+   if __name__ == "__main__":
+
+   to control execution.
+
+6. This prevents automatic execution when file is imported.
+
+7. Good practice in automation scripts and DevOps projects.
