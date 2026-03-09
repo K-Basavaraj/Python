@@ -219,7 +219,7 @@ Bad Practice Example:
 """
 
 try:
-    print(undeclared_variable)
+    print("undeclared_variable")
 except:
     pass   # BAD: hides real bugs
 
