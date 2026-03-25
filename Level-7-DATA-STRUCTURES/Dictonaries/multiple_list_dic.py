@@ -19,7 +19,6 @@ movies = [
     }
 ]
 
-
 def search_movies_by_language(language):
     result = []
     

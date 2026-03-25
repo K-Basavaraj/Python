@@ -5,6 +5,8 @@ inception_movie = {
     "rating" : 8.8,
 }
 
+print(inception_movie.keys()) #dict_keys(['director', 'relased_year', 'rating'])
+
 # Returns None if key doesn't exist
 movie = inception_movie.get("Language") #it wont print anything in the terminal
 print(movie) # it will print None 
