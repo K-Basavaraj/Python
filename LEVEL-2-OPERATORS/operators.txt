@@ -22,7 +22,51 @@ Mltiplication [*]
 Addition [ + ] 
 Substraction [ - ] 
 --------
+Special Operators in Python
+Special operators in Python help manipulate numbers effectively. Here are the essential operators:
+-> Unary Operator (Negative Sign)
+Used to change a positive number to a negative.
+Essential for financial transactions where refunds are expressed as negative amounts.
+Example: A refund of $50 is represented as -50 using a unary operator.
 
 
+-> Binary Operator (Addition)
+Performs arithmetic and logical operations, like combining numbers.
+Used for calculating totals, such as in a shopping cart.
+Example: Adding prices of items:
+Item 1: $30
+Item 2: $20
+Total using binary + operator is $50.
 
+Key Takeaways
+Unary operators simplify expressing deductions, crucial for accounting.
+Binary operators ease combining multiple quantities, essential for computing totals. 
+Understanding and utilizing these operators enable more efficient number handling in Python programming.
+=========================
+Operator Precedence in Python
+Operator precedence is crucial for ensuring accurate calculations in Python programming. 
+The hierarchy of operations dictates the order of execution:
 
+Parentheses (PE): Always perform tasks inside parentheses first.
+Exponents (E): Follow up with exponents or powers.
+Multiplication and Division (MD): Proceed with these from left to right.
+Addition and Subtraction (AS): Conclude with these operations, also from left to right.
+
+The mnemonic 'PEMDAS' (Please Excuse My Dear Aunt Sally) helps remember this hierarchy. 
+Correct use of precedence prevents errors in code execution.
+=====================
+Boolean Operators in Python: 
+essential for decision-making in python, controlling program flow 
+based on certain conditions. 
+they are { And, Not, Or } 
+These operators allow: 
+Combining multiple conditions: use {and} and {or} to effeciently evaluate if conditions like 
+"Both this and that are true" or "either this or that is true" apply. 
+Managing User access: for example, checking if "not a user" to restric access. 
+Dynamic Program Behaviour: Activate or deactiavte progarm features based on defined conditions. 
+
+When to use Boolean Operators 
+-> Code logic is clear and concise 
+-> Help evaluate conditions
+-> manage user permissions 
+-> Easily Activate or deactivate features. 

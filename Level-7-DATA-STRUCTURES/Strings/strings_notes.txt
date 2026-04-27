@@ -1,0 +1,5 @@
+strings, which are sequences of text. enclosed in quotation marks. 
+Understanding string operations is essential for manipulating text in programs. Here are two primary operations:
+a) Concatenation = + strings and b) Repetition = * strings 
+
+These operations provide flexible ways to handle text data, making scripting with strings more efficient and intuitive.
