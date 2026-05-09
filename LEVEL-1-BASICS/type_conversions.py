@@ -46,7 +46,7 @@ age_int = int(age_str) #converting string to int
 age_next_year = age_int + 1
 print("Next year, you will be " + str(age_next_year) + " years old.") #Next year, you will be 26 years old.
 
-
+  
 price_str = "19.9"
 price = float(price_str) #converting string to float
 
