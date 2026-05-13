@@ -1,0 +1,6 @@
+-> ADDING(3): append, extend, and insert
+-> REMOVING(3) : remove, pop, clear 
+-> searching(2): index, count 
+-> ordering: sort, reverse 
+-> copying: copy 
+

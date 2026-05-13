@@ -122,3 +122,16 @@ print("Rolling back deployment...")
 while deployment_steps:
     last_step = deployment_steps.pop() #pop the last step from the list
     print(f"Undoing step: {last_step}") #output: Undoing step: updated load balancer, Undoing step: started new container, Undoing step: stopped old container, Undoing step: pulled new docker image here we have used a while loop to keep undoing the deployment steps until there are no more steps left. We use the pop method without an index to remove the last step from the list and store it in the last_step variable. Then we print out a message saying that we are undoing that step. This way we can roll back the deployment by undoing each step in reverse order.
+
+#######################################################################################################################
+#finding servers place in rotation 
+
+load_balancer_pool = ["web-01", "web-02", "web-03", "web-04"]
+
+target = "web03"
+
+if target in load_balancer_pool: 
+    position = load_balancer_pool.index(target)
+    print(f"{target} is at position {position} in the rotation")
+else:
+    print(f"{target} is not in the LB pool")

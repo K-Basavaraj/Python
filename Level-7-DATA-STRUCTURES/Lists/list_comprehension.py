@@ -1,6 +1,5 @@
 """
 List comprehensions offer a more concise way to generate lists in Python compared to traditional loops.
-List comprehensions offer a more concise way to generate lists in Python compared to traditional loops.
 
 Key Concepts:
 Automatic List Generators: Create lists by applying mathematical operations and computations.
