@@ -4,3 +4,9 @@
 -> ordering: sort, reverse 
 -> copying: copy 
 
+list() is a built-in constructor its job is to create a new list from something else (a string, tuple,set, dict, range, etc; )
+syntax: new_list = list(something_iterable)
+example: list("abc")
+
+listmethoids are differnet will define my_list.something() 
+example: my_list.append("x")
