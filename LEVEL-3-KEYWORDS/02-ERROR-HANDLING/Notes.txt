@@ -1,0 +1,71 @@
+=========================================================
+EXCEPTION HANDLING IN PYTHON
+try | except | finally | raise | and assert
+=========================================================
+
+1) WHAT IS AN EXCEPTION?
+An exception is an error that occurs during program execution. If not handled, it stops the program.
+Basically it catch and handle the errors so the program does not crash. 
+
+2) Common error types you will catch often 
+-> ValueError               = Wrong Value Type (int("abc"))
+-> TypeError                = wrong type used ("5" + 5)
+-> ZeroDivisionError        = dividing by zero 
+-> KeyError                 = dict key doesnt exist 
+-> IndexError               = list index out of range 
+-> FileNotFoundError        = file not found 
+-> AttributeError           = object doesnt have that attribute.
+-> Exception                = catches ANY error (use carefully)
+
+
+3) WHY WE USE EXCEPTION HANDLING?
+
+In real applications:
+- User input may be invalid
+- File may not exist
+- API may fail
+- Division by zero may occur
+- Configuration may be wrong
+
+Instead of crashing the program, we handle errors safely.
+
+=========================================================
+SHORTER VERSION
+=========================================================
+
+Exception handling in Python is done using try, except, 
+finally, and raise. The try block contains risky code, 
+the except block handles errors, the finally block runs 
+cleanup logic, and raise is used to manually throw 
+exceptions when validation fails.
+
+4) Difference Between raise and assert
+raise  → Used in production to enforce rules. and use raise for user input and runtime checks 
+assert → Used in development for debugging checks. and use for internal debugging
+
+raise will ALWAYS execute.
+assert may be ignored in optimized mode.
+
+5) pass : does nothing, use when syntax needs code but you dont want any logic yet 
+assert: crashes if a conditon is false(debug-time), use sanity checks during development
+raise: manual throws an error(runtime), use validating prod inputs or signalling problems 
+
+sumaary: 
+use assert for Internal debugging Cheques during development They can be disabled in production with python -O.
+use raise For real validation in production code, Like checking user inputs, beacuse raised errors always run, regaRDLESS OF OPTIMIZATION FLAGS. 
+
+6) IF WE ALREADY HAVE TRY/EXCEPT WHY DO WE NEED RAISE AND PASS ? 
+-> try/except -> catches errors that happens 
+-> raise -> creates errors on puposes 
+-> pass -> does nothing \
+
+7) what is the use of pass ? 
+pass is a placeholder. Python requires code Inside functions, classes, loops and conditrionals. 
+if we leave them empty. we get an IndentationalError. so pass leats you intenolly leave a bl;ock empty. 
+
+Key-point: 
+-> empty function/class for now   -> use pass 
+-> skip current loop iteration    -> use continue 
+-> exit the loop entierly         -> use break 
+-> return None explictly          -> use return 
+-> Throw an error                 -> use raise 
