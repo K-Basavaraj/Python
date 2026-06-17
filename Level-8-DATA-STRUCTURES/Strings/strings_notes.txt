@@ -3,3 +3,8 @@ Understanding string operations is essential for manipulating text in programs. 
 a) Concatenation = + strings and b) Repetition = * strings 
 
 These operations provide flexible ways to handle text data, making scripting with strings more efficient and intuitive.
+
+#Strings are Arrays
+strings in Python are arrays of unicode characters.
+However, Python does not have a character data type, a single character is simply a string with a length of 1.
+Square brackets can be used to access elements of the string.

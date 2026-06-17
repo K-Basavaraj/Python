@@ -32,3 +32,7 @@ print("Hello "+ name) #Hello Basavaraj
 
 name = "Alex"
 print("Hi "+ name) #Hi Alex
+
+
+x= y= z = "Hello world"
+print(x)
