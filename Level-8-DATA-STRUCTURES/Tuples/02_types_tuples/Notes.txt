@@ -1,0 +1,10 @@
+.index() vs .count() which to use? 
+
+-> .index(value) --> where is it? (returns poistion) 
+-> .count(value) --> how many (returns count)
+
+fruits.index("apple") -> 0 (first poition)
+fruits.count("apple) -> 1 (number of times)
+
+.count(x) method -> return count(int) -> no crash it gives 0 
+.index(x) method -> returns poistion -> yes gives value error crahses 

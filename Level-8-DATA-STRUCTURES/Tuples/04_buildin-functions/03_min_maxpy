@@ -1,0 +1,44 @@
+"""
+min(tup)
+max(tup)
+sorted(tup)
+
+all these are builtin functions they can take the tuples as input they  dont modify the tuple 
+
+synatrx: min(tuple_name)
+min(tuple_name, key=function)
+min(tuple_name, default=value)
+"""
+nums = (45,92,30,75,88)
+print(min(nums)) #30
+
+fruits = ("banana", "apple", "cherry")
+print(min(fruits)) #apple which compare alphabatical order 
+
+#example2: max 
+print(max(nums)) #92 
+print(max(fruits)) #cherry 
+
+#example: empty 
+empty = () 
+print(min(empty, default=0))
+print(max(empty, default=0))
+
+#example using min/max with key = for custom comparision 
+#when the tuple conbtains complex items (like nested tuples) 
+employees = (
+    ( "Alice", 30),
+    ("Bob", 25),
+    ("charle", 35),
+)
+
+#without key 
+print(min(employees)) #('Alice', 30)
+print(max(employees)) #('charle', 35)
+
+#with key - compare by age (index 1)
+youngest = min(employees, key=lambda emp: emp[1])
+oldest = max(employees, key=lambda emp:emp[1])
+
+print(youngest) #('Bob', 25)
+print(oldest) #('charle', 35)
