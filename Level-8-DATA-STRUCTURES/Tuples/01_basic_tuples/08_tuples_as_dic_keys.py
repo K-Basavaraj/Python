@@ -4,6 +4,14 @@ In python dictonories, every key must be immutable(can not be chnage after creat
 -> Lists are mutable -> can not be used as dict keys. 
 
 Note: The rule which is Dictnory need keys that never change. 
+
+from the dict module we learned that dictr keys must be: 
+
+1. immutable (can not chnage)
+2. unique( no duplicates)
+
+allowed as keys: string, numbers tuples, booleans 
+not allowed: lists, dicts, sets (they are mutable)
 """
 #example1: A dictonary stores data as key value pairs. 
 person = {
@@ -13,7 +21,7 @@ person = {
 }
 print(person["name"]) #o/p: Basavaraj (which is use the key get the value.)
 
-#example2: Tuples as keys we use a tuple when we need a key made of multiple values
+#example2: Tuples as dict keys we use a tuple when we need a multi - part key made of multiple values
 locations = {
     ("us-east-1", "Zone-1"): "server-A", 
     ("us-west-1", "oregon"): "server-B",
