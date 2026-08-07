@@ -1,0 +1,103 @@
+Virtual Env in python: 
+--------------------
+imagine we have two projects on our laptop 
+Proj A    -> need request version 2.0 
+project B -> need request version 3.0 
+if we install both on our system python they conflict one will break. 
+#------------------------------------------------------------------------------------------------------
+Virtual-Env: 
+-------------
+its like a separte Box for each project
+{server}
+|
+|-system python (dont tocuh this)
+|
+|-myenv (project A's Box)
+|    |
+|    |-requests 2.0 
+|      flask 1.0 
+|
+|-myenv2 (project B's box)
+    |
+    |-requests 3.0 
+      django 
+each box is isolated - packages in one box dont affect the other. clean safe and no conflicts. 
+
+scenari: 
+imagine we wrote a python script that connects to a database: 
+some hardcoded scertes
+problem: 
+commit to git, which is public, change the code evrytime we switch from dev to prod. 
+every developer oin the team has different creds. 
+
+solution: 
+store config and secretes outside the code in the environment itself 
+example: 
+read from teh environment 
+password = os.getenv("db_password)
+db_host = os.getenv("DB_Host)
+
+code has no secerets and dev, staging and prod all have diff env vars and same code works everywhere. 
+
+each developer sets their own values locally. 
+#------------------------------------------------------------------------------------------------------
+what is a .env file? 
+we set env vars in a .env file locally on machines 
+like 
+password=secret123
+db_hsot=prod.db.com
+app_env=prod
+
+so the file is never commited to git add to .gitignore 
+these are injects by he pipeline, no .env file needed 
+python scripts reads the same way either via os.getenv()
+#------------------------------------------------------------------------------------------------------
+python -m pip install virtaulenv 
+
+#create virtalenv 
+{ python -m venv myenv }
+
+#activateit 
+myenv\scripts\actiavte
+
+output: 
+(myenv) E:\aws_github_repos\Programming\Python\Devops-python>
+
+#install python-dotenv 
+-> { pip install python-dotenv }
+its a third party library it doesnt come with python by default. 
+where this 
+python-dotenvtool that reads our .env file and loads all the varibales into os.environ automati8cally. 
+
+without it we should have manullay read the file and set each varibale ourself 
+python does this. 
+load_dotenv() #which reads .env file and loads everything automatically. 
+Note: 
+python-dotenv is isnatlled only inside myenv, where my system python is not affected and anothe rproject with a diff venv wont have it unless they install it. 
+
+to deactivate the venv use 
+->{ deactivate }
+
+Note:
+myenv folder  working on project always actoavte venv first. done for the day deactivate it. 
+--------
+dont delete. 
+------
+sharing the code with temmates on Github never push mynev to github 
+
+t6emmates clones my projects they create their own venv and run pip install -r requremnt.txt 
+project is dead / no longer needed then delete foler. 
+
+>pip freeze > requirements.txt
+>echo myenv >> .gitignore
+
+Teammates does this after cloning: 
+-------------
+virtualenv myenv 
+
+myenv\scripts\activate 
+
+pip install -r requirements.txt 
+
+Note: Never commit myenv folder to git - its huge, machine specific and unnecessary. insted commit requrments.txt - thats all 
+teammates need to recarte the same environment. 

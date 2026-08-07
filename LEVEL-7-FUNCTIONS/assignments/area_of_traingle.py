@@ -1,9 +1,3 @@
-#we seen How we passed the values intop a function as parameters by passing values.  
-#What about getting values out of a function? this is where return values comes. which means 
-"""
-print() → just shows the result on the screen (you see it, but can't reuse it).
-return → gives the result back to your program, so you can store it, use it later, or pass it to another function.
-"""
 def area_traingle(base, height):
     return base*height/2 #The return sends that value back to wherever the function was called.
 
@@ -17,8 +11,3 @@ print("sum of both areas is: " + str(sum)) #sum of both areas is: 22.5
 None means “no value” in Python.
 A function returns None by default if you don’t use a return statement.
 """
-def greeting(name): 
-    print("welcome, " + name)
-
-result = greeting("Basavaraj") #welcome, Basavaraj
-print(result) #None

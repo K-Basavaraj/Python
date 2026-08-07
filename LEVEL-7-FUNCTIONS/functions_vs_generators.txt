@@ -1,0 +1,43 @@
+FUNCTIONS:
+-> functions return to output a single result 
+->  execute all at once when called
+-> store all data in memory at once. 
+-> typically used for 1-time calculating or single actions
+-> Doesnt reatin state between calls. as each call is independent. 
+
+Common in both FUNCTIONS: and GENERATORS: 
+---------------------------------
+-> defined using a def keyword 
+-> resubale for repatative tasks
+-> can take parameters. 
+-> can be looped over 
+-> used to break down complex tasks.
+
+GENERATORS: 
+-> use "yield" to produce a sequence 1 at a time. 
+-> Execute in a paused state resuming where it left off. 
+-> memory efficient 
+-> ideal for processing data in chunks or strems 
+-> reatin state between yields. 
+
+
+
+==> Understanding Functions and Generators
+
+Functions: 
+----------
+1) Execute a block of code for specific tasks. and return a result immediately("if-this-then-that"). 
+2) They can take in parameters, perform actions, and return a result. F
+3) functions are great for performing one off tasks or calculations all at once. However, they return a single result and don't retain any state after they finish executing. 
+4) Some examples can be built-in functions that Python all ready comes preloaded with, or we can write our own self defined functions to handle our own custom logic.
+5)When to Use: Functions: Ideal for straightforward, repeat tasks executed instantly. No state is retained.
+
+Generators:
+------------
+1) Generators, are a special type of function that lets you control the flow of production in a more gradual way Manage data flow efficiently; handle large or ongoing tasks in chunks.
+2) By using yield instead of return, generators produce values one at a time, pausing between each until they're needed again. 
+example: This is like baking cookies in batches. You only bake what you need when you need it, which saves resources.
+3) Generators are ideal for handling large sequences or ongoing tasks without overloading memory. Instead of holding all the data at once, they create each piece as requested.
+4) This is incredibly useful for scenarios where you might not know the total size of the data or want to process it in chunks.
+5) When to Use: Optimal for memory-efficient task management involving sequences, conserving resources, especially in uncertain scenarios like continuous orders.
+Leverage these tools to achieve flexible and resource-efficient coding strategies.
