@@ -101,3 +101,9 @@ pip install -r requirements.txt
 
 Note: Never commit myenv folder to git - its huge, machine specific and unnecessary. insted commit requrments.txt - thats all 
 teammates need to recarte the same environment. 
+
+
+Os module: 
+--------
+Os module is teh bridge between our python script and the Operating system it leats us code alk to the os directly 
+this will help in env varibles, fiel and dir opearions and system informations.
